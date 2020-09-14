@@ -76,6 +76,7 @@ if ($zipcodeisavailable) {
 
 $email = $street = $streetnumber = $city = $zipcode = "";
 $emailErr = $streetErr = $streetnumberErr = $cityErr = $zipcodeErr = "";
+// Validate and check
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["email"])) {
         $emailErr = "email is required";
@@ -120,4 +121,5 @@ echo $streetErr;
 echo $streetnumberErr;
 echo $cityErr;
 echo $zipcodeErr;
+
 require 'form-view.php';
